@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            font-size: 3rem;
+            margin-left: 30%;
+            color: red;
+            width: 35%;
+            font-weight: bold;
+            text-decoration: double underline greenyellow;
+        }
+
+        p {
+            font-size: 2rem;
+        }
+        
+        li {
+            font-size: 1.5rem;
+        }
+        
+        #h {
+            text-align: center;
+        }
+        
+        #click{
+            cursor: pointer;
+            width: 40%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="h">Hello Bro</div>
+    <div id="click">Life Cycle methods Demo</div>
+    <p>
+        The Servlet and ServletConfig are interfaces.
+        GenericServlet is an abstract class that implements Servlet, ServletConfig, Serializable interface and extends
+        the Object class.
+        HttpServlet is an abstract class extends the GenericServlet class. <br><br>
+        Servlet interface has three methods that are the lifecycle methods of the Servlet: <br>
+    <ul>
+        <li> public abstract void init(ServletConfig config) throws ServletException => this method is there in the Servlet interface and this
+            method must not be overridden and this method is called for the initialization of the object of subclass of
+            the Servlet interface. this method is called once in the lifetime of the servlet.</li>
+        <li> public abstract void service(ServletRequest request, ServletResponse response) throws ServletException, IOException => this method is in the
+            Servlet interface and this method must not be overridden and this method is called from a thread. and that
+            thread is newly created for each request and dissolves the thread after serving the response.</li>
+        <li> public abstract void destroy() => this method is called when the application shutdowns. And we can override
+            this method in the child class.</li>
+    </ul>
+    <br>
+    <p> GenericServlet has implemented all the methods except the public abstract void service(ServletRequest, ServletResponse) method in it
+        and that's why it is an abstract class. But GenericServlet also overload the public void init() method in it that has no code but it can be override in the child class where we can write the code that is to be run at the time of instantiation of Servlet object. This init() method is called from the init(ServletConfig) method internally.</p>
+    <p> HttpServlet has implemented all the methods and also service(ServletRequest, ServletResponse) method in it but also it created the overloaded version of the service() method. It also has the 7 request methods inside it. Here in the HttpServlet nothing is abstract but the class is abstract to avoid the use of its properties by creating its object. So one can access its properties and methods by only creating its child class. Inside it, the 7 request methods are there to override it in the subclass</p>
+    <ul>
+        <li>doGet(HttpServletRequest, HttpServletResponse)</li>
+        <li>doPost(HttpServletRequest, HttpServletResponse)</li>
+        <li>doDelete(HttpServletRequest, HttpServletResponse)</li>
+        <li>doHead(HttpServletRequest, HttpServletResponse)</li>
+        <li>doOptions(HttpServletRequest, HttpServletResponse)</li>
+        <li>doPut(HttpServletRequest, HttpServletResponse)</li>
+        <li>do(HttpServletRequest, HttpServletResponse)</li>
+        <li>public void service(ServletRequest, ServletResponse)</li>
+        <li>protected void service(HttpServletRequest, HttpServletResponse)</li>
+    </ul>
+    </p>
+
+    <script>
+
+        let click = document.querySelector('#click');
+
+        click.addEventListener("click", () => {
+            window.location = "save.do";
+        });
+
+    </script>
+</body>
+
+</html>

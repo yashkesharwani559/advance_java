@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            font-size: 3rem;
+            color: brown;
+            font-family: verdana;
+            text-align: center;
+        }
+        td{
+            padding-right: 6rem;
+            padding-top: 3rem;
+            font-size: 3rem;
+            color: greenyellow;
+        }
+        table{
+            margin-left: 30rem;
+        }
+        input{
+            height: 2rem;
+            width: 2rem;
+            box-sizing: border-box;
+        }
+
+        input:hover{
+            border: 7px solid black;
+            cursor: pointer;
+        }
+
+        .btn{
+            background-color: red;
+            color: white;
+            height: 4rem;
+            width: 10rem;
+            padding: 1rem;
+            border-color: bisque;
+            border-radius: 0.8rem;
+            font-size: 2rem;
+            margin-left: 10rem;
+        }
+
+        .btn:hover{
+            cursor: pointer;
+        }
+
+        body{
+            background-image: url(back.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        #b{
+            margin-left: 0px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Login Form</h1>
+    <hr>
+    <form action="order.do" method="post">
+        <table>
+            <tr>
+                <td colspan="3">Food Options</td>
+            </tr>            
+            <tr>
+                <td>Poha <input type="checkbox" value="poha hai" name="food"></td>
+                <td>Samosa <input type="checkbox" value="samosa hai" name="food"></td>
+                <td>Jalebi <input type="checkbox" value="jalebi hai" name="food" checked></td>
+            </tr>
+            <tr>
+                <td colspan="3"><input type="submit" value="Order" class="btn"></td>
+                <td colspan="3"><input type="reset" value="Reset" class="btn" id="b"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
+<!-- here it will send 'on' as value because the value attribute is not given in the input:checkbox 
+here input:type=reset is a type which resets values of all the input fields into default value
+in input of type of checkbox checked="checked" or checked (both are same) makes that checkbox checked by default
+-->

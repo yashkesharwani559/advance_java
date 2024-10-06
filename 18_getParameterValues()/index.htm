@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            font-size: 3rem;
+            color: brown;
+            font-family: verdana;
+            text-align: center;
+        }
+        td{
+            padding-right: 6rem;
+            padding-top: 3rem;
+            font-size: 3rem;
+            color: greenyellow;
+        }
+        table{
+            margin-left: 30rem;
+        }
+        input{
+            height: 2rem;
+            width: 20rem;
+            box-sizing: border-box;
+        }
+
+        input:hover{
+            border: 7px solid black;
+            cursor: pointer;
+        }
+
+        .btn{
+            background-color: red;
+            color: white;
+            height: 4rem;
+            width: 10rem;
+            padding: 1rem;
+            border-color: bisque;
+            border-radius: 0.8rem;
+            font-size: 2rem;
+            margin-left: 10rem;
+        }
+
+        .btn:hover{
+            cursor: pointer;
+        }
+
+        body{
+            background-image: url(back.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        #b{
+            margin-left: 0px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Login Form</h1>
+    <hr>
+    <form action="order.do">
+        <table>
+            <tr>
+                <td>Name: <input type="text" name="nm" id=""></td>
+            </tr>
+            <tr>
+                <td colspan="3">Travel Options</td>
+            </tr>            
+            <tr>
+                <td>Car <input type="radio" value="car" name="travel"></td>
+                <td>Bus <input type="radio" value="bus" name="travel" checked></td>
+                <td>Train <input type="radio" value="train" name="travel"></td>
+            </tr>
+            <tr>
+                <td colspan="3"><input type="submit" value="Choice" class="btn"></td>
+                <td colspan="3"><input type="reset" value="Reset" class="btn" id="b"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
+<!-- here it will send 'on' as value because the value attribute is not given in the input:checkbox 
+here input:type=reset is a type which resets values of all the input fields into default value
+in input of type of checkbox checked="checked" or checked (both are same) makes that checkbox checked by default
+-->

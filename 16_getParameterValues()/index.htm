@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            font-size: 3rem;
+            color: brown;
+            font-family: verdana;
+            text-align: center;
+        }
+        td{
+            padding-right: 6rem;
+            padding-top: 3rem;
+            font-size: 3rem;
+            color: greenyellow;
+        }
+        table{
+            margin-left: 30rem;
+        }
+        input{
+            height: 2rem;
+            width: 2rem;
+            box-sizing: border-box;
+        }
+
+        input:hover{
+            border: 7px solid black;
+            cursor: pointer;
+        }
+
+        #btn{
+            background-color: red;
+            color: white;
+            height: 4rem;
+            width: 10rem;
+            padding: 1rem;
+            border-color: bisque;
+            border-radius: 0.8rem;
+            font-size: 2rem;
+            margin-left: 15rem;
+        }
+
+        #btn:hover{
+            cursor: pointer;
+        }
+
+        body{
+            background-image: url(back.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Login Form</h1>
+    <hr>
+    <form action="order.do" method="post">
+        <table>
+            <tr>
+                <td colspan="3">Food Options</td>
+            </tr>            
+            <tr>
+                <td>Poha <input type="checkbox" name="food"></td>
+                <td>Samosa <input type="checkbox" name="food"></td>
+                <td>Jalebi <input type="checkbox" name="food"></td>
+            </tr>
+            <tr>
+                <td colspan="3"><input type="submit" value="Order" id="btn"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
+<!-- here it will send 'on' as value because the value attribute is not given in the input:checkbox -->
